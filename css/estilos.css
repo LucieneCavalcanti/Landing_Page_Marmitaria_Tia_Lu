@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+    color: darkred;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+header {
+    width: 100%;
+    height: 500px;
+    background-image: url("../imagens/banner_topo2.png");
+    background-repeat: no-repeat;
+    background-position: top center; 
+    background-size: 100% auto;
+    background-attachment: fixed; 
+}
+#cardapio {
+    display: grid;
+    /* Cria 3 colunas com tamanhos iguais */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Espaçamento entre os itens */
+    gap: 20px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo do main */
+}
+
+.card {
+    text-align: center;
+    background: white; /* Opcional: para destacar do fundo antiquewhite */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 100%; /* Faz a imagem ocupar toda a largura da div do grid */
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
