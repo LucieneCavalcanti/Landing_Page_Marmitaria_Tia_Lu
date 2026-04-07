@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        output {
+            padding:10px;
+            border: solid 2px black;
+        }
+    </style>
+    <script>
+        function somar(){
+            calculadora.resultado.value = parseInt(calculadora.numero1.value) +
+            parseInt(calculadora.numero2.value)
+            calculadora.resultado.style.backgroundColor = "red"
+            calculadora.resultado.style.color = "yellow"
+        }
+        function subtrair(){
+            calculadora.resultado.value = parseInt(calculadora.numero1.value) -
+            parseInt(calculadora.numero2.value)
+            calculadora.resultado.style.backgroundColor = "blue"
+            calculadora.resultado.style.color = "white"
+            calculadora.resultado.style.width = "300px"
+        }
+        function multiplicar(){
+            calculadora.resultado.value = parseInt(calculadora.numero1.value) *
+            parseInt(calculadora.numero2.value)
+            calculadora.resultado.style.backgroundColor = "yellow"
+        }
+        function dividir(){
+            calculadora.resultado.value = parseInt(calculadora.numero1.value) /
+            parseInt(calculadora.numero2.value)
+            calculadora.resultado.style.backgroundColor = "pink"
+        }
+    </script>
+</head>
+<body onload="alert('boas vindas!!!!')">
+    <h1>Página com botões e Javascript</h1>
+    <button type="button" onclick="alert('oi')">
+        Clique aqui  </button>
+    <img src="imagens/item2.png" onmouseenter="alert('que fomeeee')">
+    <form name="calculadora">
+        <input type="number" name="numero1"><br>
+        <input type="number" name="numero2"><br>
+        <button type="button" onclick="somar()">Somar</button>
+        <button type="button" 
+        onclick="subtrair()">Subtração</button>
+        <button type="button" 
+        onclick="multiplicar()">Multiplicação</button>
+        <button type="button" 
+        onclick="dividir()">Divisão</button><br><br><br><br>
+        <label for="resultado">Resultado:</label>
+        <output name="resultado">0</output>
+    </form>
+</body>
+</html>

@@ -31,7 +31,7 @@ header {
 }
 #delivery {
     display: grid;
-    /* Cria 3 colunas com tamanhos iguais */
+    /* Cria 2 colunas com tamanhos iguais */
     grid-template-columns: repeat(2, 1fr); 
     /* Espaçamento entre os itens */
     gap: 20px; 
@@ -39,6 +39,25 @@ header {
     max-width: 1200px;
     margin: 0 auto; /* Centraliza o conteúdo do main */
 }
+#designer {
+    display: grid;
+    /* Cria 2 colunas com tamanhos iguais */
+    grid-template-columns: repeat(1, 1fr); 
+    /* Espaçamento entre os itens */
+    gap: 20px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo do main */
+}
+.card_desenvolvedor {
+    text-align: center;
+    background: rgb(246, 212, 212); /* Opcional: para destacar do fundo antiquewhite */
+    box-shadow:blueviolet 2px;
+    padding: 5px;
+    border-radius: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .card {
     text-align: center;
     background: white; /* Opcional: para destacar do fundo antiquewhite */
