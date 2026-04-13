@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando as médias</title>
+    <script>
+        function calcular(){
+            var n1 = parseFloat(medias.nota1.value)
+            var n2 = parseFloat(medias.nota2.value)
+            if(n1<0 || n1>10 || n2<0 || n2>10){
+                if(n1<0){
+                    document.getElementById("valormedia").innerHTML = "Nota 1 deve ser maior que zero"
+                    document.getElementById("nota1").style.color = "red"
+                }if(n2<0)
+                    document.getElementById("valormedia").innerHTML = "Nota 2 deve ser maior que zero"
+                if(n1>10)
+                    document.getElementById("valormedia").innerHTML = "Nota 1 deve ser menor que 10"
+                if(n2>10)
+                    document.getElementById("valormedia").innerHTML = "Nota 2 deve ser menor que 10"
+                document.getElementById("resultado").innerHTML = "Notas inválidas"
+            }else {
+                var mediafinal = (n1+n2)/2
+                document.getElementById("valormedia").innerHTML = mediafinal
+                if(mediafinal>=6){
+                    document.getElementById("resultado").innerHTML= "Aprovado"
+                    document.getElementById("resultado").style.backgroundColor = "blue"
+                }else {
+                    document.getElementById("resultado").innerHTML= "Reprovado"
+                    document.getElementById("resultado").style.backgroundColor = "red"
+                }
+            }
+        }
+        function validarcamponota1(){
+            var n1 = parseFloat(medias.nota1.value)
+            if(n1<0){
+                document.getElementById("nota1").style.color = "red"
+            }else if(n1>10){
+                document.getElementById("nota1").style.color = "red"
+            }else{
+                document.getElementById("nota1").style.color = "black"
+            }
+        }
+        function validarcamponota2(){
+            var n2 = parseFloat(medias.nota2.value)
+            if(n2<0){
+                document.getElementById("nota2").style.color = "red"
+            }else if(n2>10){
+                document.getElementById("nota2").style.color = "red"
+            }else{
+                document.getElementById("nota2").style.color = "black"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Calculadora de média</h2>
+    <form name="medias">
+        <label for="nota1">Digite a nota 1:</label>
+        <input type="number" name="nota1" id="nota1" min="0" max="10"
+        onkeyup="validarcamponota1()" ><br>
+        <label for="nota2">Digite a nota 2:</label>
+        <input type="number" name = "nota2" id="nota2" min="0" max="10" 
+        onkeyup="validarcamponota2()"><br>
+        <button type="button" onclick="calcular()">Calcular média</button><br>
+        <output id="valormedia">0</output><br>
+        <output id="resultado">---</output>
+    </form>
+</body>
+</html>
